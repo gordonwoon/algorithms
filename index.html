@@ -6,6 +6,7 @@
     <script src="./random-color.js"></script>
     <script src="./container-challenge.js"></script>
     <script src="./prime-check.js"></script>
+    <script src="./find-duplicates-sorted.js"></script>
     <script>
       let a = [86, 22, 21, 93, 70, 49, 88, 51, 100, 36, 38, 39, 81, 3, 25, 10, 98, 54, 5, 48, 63, 1, 65, 23, 79, 43, 32, 67, 91, 73, 96, 4, 12, 17, 2, 26, 11, 82, 83, 75, 85, 72, 30, 90, 24, 7, 76, 64, 20, 77];
 
@@ -39,6 +40,13 @@
       console.time('prime');
       console.log('isPrime', isPrime(97));
       console.timeEnd('prime')
+
+
+      let arr1 =  [1, 2, 3, 3, 4, 5, 7]
+      let arr2 =  [2, 3, 3, 6, 7]
+      console.time('duplicates');
+      console.log('findDuplicates', findDuplicates(arr1, arr2));
+      console.timeEnd('duplicates')
     </script>
   </body>
 </html>
