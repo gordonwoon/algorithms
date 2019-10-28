@@ -1,6 +1,7 @@
 <html>
   <body>
     <script src="./merge-sort.js"></script>
+    <script src="./quick-sort.js"></script>
     <script src="./binary-search.js"></script>
     <script src="./flatten-array.js"></script>
     <script src="./random-color.js"></script>
@@ -10,13 +11,17 @@
     <script>
       let a = [86, 22, 21, 93, 70, 49, 88, 51, 100, 36, 38, 39, 81, 3, 25, 10, 98, 54, 5, 48, 63, 1, 65, 23, 79, 43, 32, 67, 91, 73, 96, 4, 12, 17, 2, 26, 11, 82, 83, 75, 85, 72, 30, 90, 24, 7, 76, 64, 20, 77];
 
+      console.time('sort');
+      console.log('sort', a.sort((a, b) => a - b));
+      console.timeEnd('sort');
+
       console.time('merge');
       console.log('merge', merge(a));
       console.timeEnd('merge');
 
-      console.time('sort');
-      console.log('sort', a.sort((a, b) => a - b));
-      console.timeEnd('sort');
+      console.time('quick');
+      console.log('quick', quick(a));
+      console.timeEnd('quick');
 
       let b = merge(a);
 
